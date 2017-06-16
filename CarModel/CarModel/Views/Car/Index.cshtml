@@ -6,6 +6,9 @@
 <form action="@Url.Action("DeleteCar","Car")">
     <input type="submit" class="btn btn-primary" value="Delete Car" />
 </form>
+<form action="@Url.Action("Edit","Car")">
+    <input type="submit" class="btn btn-primary" value="Edit Car" />
+</form>
 
 <form action="@Url.Action("Index","Car")">
     @foreach (var car in Model.Cars)

@@ -37,14 +37,15 @@ namespace CarModel.Repository
             _carContext.SaveChanges();
         }
 
-        public Car Edit(Car updatedCar)
+        public Car Edit(Car updatingCar)
         {
-            throw new NotImplementedException();
+            _carContext.Update(updatingCar);
+            _carContext.SaveChanges();
+            return updatingCar;
         }
-
         public Car GetCarById(int carId)
         {
-            throw new NotImplementedException();
+            return _carContext.Cars.FirstOrDefault(c => c.Id == carId);
         }
     }
 }

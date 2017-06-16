@@ -1,0 +1,30 @@
+﻿<form action="@Url.Action("EditCar","Car")">
+    <label for="Id">Edit Car</label>
+    <input id="Id" name="Id" type="number" />
+    <label for="brandId">Brand</label>
+    <input id="brandId" name="brand" type="text" />
+    <label for="regNrId">RegNr</label>
+    <input id="regNrId" name="regNr" type="text" />
+    <label for="carModel">carModel</label>
+    <input id="carModel" name="carModel" type="text" />
+    <label for="carTypeId">Engine</label>
+    <input id="carTypeId" name="carTypeId" type="number" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+
+@model CarModel.ViewModels.CarViewModel
+
+<form action="@Url.Action("Index","Car")">
+    @foreach (var car in Model.Cars)
+    {
+        <div>
+            <p>Bil ID: @car.Id</p>
+            <p>Bilmärke: @car.CarBrand</p>
+            <p>RegNr: @car.RegNr</p>
+            <p>BilModel: @car.CarModel</p>
+            <p>Motor: @car.CarType.Enginge</p>
+            <p>MotorId: @car.CarType.Id</p>
+            <br />
+        </div>
+    }
+</form>

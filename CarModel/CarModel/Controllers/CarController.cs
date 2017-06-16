@@ -54,5 +54,24 @@ namespace CarModel.Controllers
 
             return RedirectToAction("Index", "Car");
         }
+
+        public IActionResult Edit()
+        {
+            CarViewModel carViewModel = new CarViewModel();
+            carViewModel.Cars = _carRepository.Cars;
+            return View(carViewModel);
+        }
+        public IActionResult EditCar(int id, string brand, string regNr,string carModel, int carTypeId)
+        {
+            var updatingCar = _carRepository.GetCarById(id);
+
+            updatingCar.CarBrand = brand;
+            updatingCar.RegNr = regNr;
+            updatingCar.CarModel = carModel;
+            updatingCar.CarTypeId = carTypeId;
+
+            _carRepository.Edit(updatingCar);
+            return RedirectToAction("Index", "Car");
+        }
     }
 }
