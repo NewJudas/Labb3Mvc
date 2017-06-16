@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CarModel.ViewModels;
 using CarModel.Repository;
+using CarModel.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,6 +27,32 @@ namespace CarModel.Controllers
             CarViewModel carViewModel = new CarViewModel();
             carViewModel.Cars = _carRepository.Cars;
             return View(carViewModel);
+        }
+        public IActionResult AddCarInfo()
+        {
+            CarViewModel carViewModel = new CarViewModel();
+            carViewModel.CarTypes = _carTypeRepository.CarTypes;
+            return View(carViewModel);
+        }
+        public IActionResult AddCar(string brand, string regNr,string carModel, int carTypeId)
+        {
+            var newCar = new Car { CarBrand = brand, RegNr = regNr,CarModel= carModel, CarTypeId = carTypeId };
+
+            _carRepository.AddCarToDb(newCar);
+            return RedirectToAction("Index", "Car");
+        }
+
+        public IActionResult DeleteCar()
+        {
+            CarViewModel carViewModel = new CarViewModel();
+            carViewModel.Cars = _carRepository.Cars;
+            return View(carViewModel);
+        }
+        public IActionResult Delete(int id)
+        {
+            _carRepository.DeleteCar(id);
+
+            return RedirectToAction("Index", "Car");
         }
     }
 }

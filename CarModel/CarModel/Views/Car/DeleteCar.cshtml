@@ -1,12 +1,10 @@
-﻿@model CarModel.ViewModels.CarViewModel
+﻿<form action="@Url.Action("Delete","Car")">
+    <label for="Id">Remove Id</label>
+    <input id="Id" name="Id" type="number" />
 
-<form action="@Url.Action("AddCarInfo","Car")">
-    <input type="submit" class="btn btn-primary" value="Add Car" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
 </form>
-<form action="@Url.Action("DeleteCar","Car")">
-    <input type="submit" class="btn btn-primary" value="Delete Car" />
-</form>
-
+@model CarModel.ViewModels.CarViewModel
 <form action="@Url.Action("Index","Car")">
     @foreach (var car in Model.Cars)
     {

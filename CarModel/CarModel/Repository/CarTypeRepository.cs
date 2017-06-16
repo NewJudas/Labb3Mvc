@@ -14,7 +14,7 @@ namespace CarModel.Repository
         {
             _carContext = carContext;
         }
-        public IEnumerable<CarType> CarTypes => throw new NotImplementedException();
+        public IEnumerable<CarType> CarTypes => _carContext.CarType;
 
         public void AddCarTypeToDb(CarType newEngine)
         {

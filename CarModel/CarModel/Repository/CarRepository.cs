@@ -26,12 +26,15 @@ namespace CarModel.Repository
 
         public void AddCarToDb(Car newCar)
         {
-            throw new NotImplementedException();
+            _carContext.Cars.Add(newCar);
+            _carContext.SaveChanges();
         }
 
         public void DeleteCar(int id)
         {
-            throw new NotImplementedException();
+            var removeCar = _carContext.Cars.Find(id);
+            _carContext.Cars.Remove(removeCar);
+            _carContext.SaveChanges();
         }
 
         public Car Edit(Car updatedCar)
