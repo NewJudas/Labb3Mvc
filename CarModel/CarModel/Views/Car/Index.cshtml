@@ -1,0 +1,16 @@
+﻿@model CarModel.ViewModels.CarViewModel
+
+<form action="@Url.Action("List","Car")">
+    @foreach (var car in Model.Cars)
+    {
+        <div>
+            <p>Bil ID: @car.Id</p>
+            <p>Bilmärke: @car.CarBrand</p>
+            <p>RegNr: @car.RegNr</p>
+            <p>RegNr: @car.CarModel</p>
+            <p>Motor: @car.CarType.Enginge</p>
+            <p>MotorId: @car.CarType.Id</p>
+            <br />
+        </div>
+    }
+</form>

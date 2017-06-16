@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CarModel.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarModel.Repository
 {
@@ -15,7 +16,13 @@ namespace CarModel.Repository
             _carContext = carContext;
         }
 
-        public IEnumerable<Car> Cars => throw new NotImplementedException();
+        public IEnumerable<Car> Cars
+        {
+            get
+            {
+                return _carContext.Cars.Include(c => c.CarType);
+            }
+        }
 
         public void AddCarToDb(Car newCar)
         {

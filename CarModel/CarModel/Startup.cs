@@ -41,6 +41,7 @@ namespace CarModel
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+            StartUpData.startUpData(app);
         }
     }
 }
