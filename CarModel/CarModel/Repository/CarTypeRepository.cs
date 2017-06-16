@@ -8,6 +8,12 @@ namespace CarModel.Repository
 {
     public class CarTypeRepository : ICarTypeRepository
     {
+        private readonly CarContext _carContext;
+
+        public CarTypeRepository(CarContext carContext)
+        {
+            _carContext = carContext;
+        }
         public IEnumerable<CarType> CarTypes => throw new NotImplementedException();
 
         public void AddCarTypeToDb(CarType newEngine)

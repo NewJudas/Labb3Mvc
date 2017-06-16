@@ -2,10 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarModel.Models;
 
 namespace CarModel.Repository
 {
-    public class CarRepository
+    public class CarRepository : ICarRepository
     {
+        private readonly CarContext _carContext;
+
+        public CarRepository(CarContext carContext)
+        {
+            _carContext = carContext;
+        }
+
+        public IEnumerable<Car> Cars => throw new NotImplementedException();
+
+        public void AddCarToDb(Car newCar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteCar(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car Edit(Car updatedCar)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Car GetCarById(int carId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
