@@ -1,0 +1,9 @@
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\bin\Debug\netcoreapp1.1\CarModel.deps.json
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\bin\Debug\netcoreapp1.1\CarModel.runtimeconfig.json
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\bin\Debug\netcoreapp1.1\CarModel.runtimeconfig.dev.json
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\bin\Debug\netcoreapp1.1\CarModel.dll
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\obj\Debug\netcoreapp1.1\CarModel.csprojResolveAssemblyReference.cache
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\obj\Debug\netcoreapp1.1\CarModel.AssemblyInfo.cs
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\bin\Debug\netcoreapp1.1\CarModel.pdb
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\obj\Debug\netcoreapp1.1\CarModel.dll
+C:\Users\Kenan Alic\Desktop\Labb3Mvc\Labb3Mvc\CarModel\CarModel\obj\Debug\netcoreapp1.1\CarModel.pdb
