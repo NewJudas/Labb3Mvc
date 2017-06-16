@@ -43,6 +43,12 @@ namespace CarModel.Repository
             _carContext.SaveChanges();
             return updatingCar;
         }
+
+        public IEnumerable<Car> GetAllCars()
+        {
+            return _carContext.Cars;
+        }
+
         public Car GetCarById(int carId)
         {
             return _carContext.Cars.FirstOrDefault(c => c.Id == carId);

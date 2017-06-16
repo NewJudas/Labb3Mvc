@@ -9,6 +9,9 @@
 <form action="@Url.Action("Edit","Car")">
     <input type="submit" class="btn btn-primary" value="Edit Car" />
 </form>
+<form action="@Url.Action("DetailsCar","Car")">
+    <input type="submit" class="btn btn-primary" value="CarDetails" />
+</form>
 
 <form action="@Url.Action("Index","Car")">
     @foreach (var car in Model.Cars)

@@ -1,0 +1,10 @@
+﻿@model CarModel.Models.Car
+<div>
+    <p>BilMärke: @Model.CarBrand</p>
+    <p>RegNr: @Model.RegNr</p>
+    <p>BilModel: @Model.CarModel</p>
+    <p>Motor: @Model.CarType.Enginge</p>
+</div>
+<form action="@Url.Action("Index","Car")">
+    <input type="submit" class="btn btn-primary" value="Back To List" />
+</form>
