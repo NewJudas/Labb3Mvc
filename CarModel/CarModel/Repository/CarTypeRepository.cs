@@ -16,14 +16,16 @@ namespace CarModel.Repository
         }
         public IEnumerable<CarType> CarTypes => _carContext.CarType;
 
-        public void AddCarTypeToDb(CarType newEngine)
+        public void AddCarTypeToDb(CarType newCarType)
         {
-            throw new NotImplementedException();
+            _carContext.CarType.Add(newCarType);
+            _carContext.SaveChanges();
         }
-
         public void DeleteCarType(int id)
         {
-            throw new NotImplementedException();
+            var removeCarType = _carContext.CarType.Find(id);
+            _carContext.CarType.Remove(removeCarType);
+            _carContext.SaveChanges();
         }
     }
 }

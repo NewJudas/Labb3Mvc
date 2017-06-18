@@ -1,5 +1,5 @@
-﻿@model CarModel.ViewModels.CarViewModel
-
+﻿@model CarViewModel
+<h1>Car</h1>
 <form action="@Url.Action("AddCarInfo","Car")">
     <input type="submit" class="btn btn-primary" value="Add Car" />
 </form>
@@ -11,6 +11,13 @@
 </form>
 <form action="@Url.Action("DetailsCar","Car")">
     <input type="submit" class="btn btn-primary" value="CarDetails" />
+</form>
+<h1>CarType</h1>
+<form action="@Url.Action("AddNewCarType","CarType")">
+    <input type="submit" class="btn btn-primary" value="Add CarType" />
+</form>
+<form action="@Url.Action("DeleteCarType","CarType")">
+    <input type="submit" class="btn btn-primary" value="Delete CarType" />
 </form>
 
 <form action="@Url.Action("Index","Car")">

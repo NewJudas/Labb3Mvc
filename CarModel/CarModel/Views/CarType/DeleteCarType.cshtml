@@ -1,0 +1,15 @@
+﻿<form action="@Url.Action("Delete","CarType")">
+    <label for="Id">Remove Id</label>
+    <input id="Id" name="Id" type="number" />
+
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+@model CarViewModel
+
+@foreach (var carEngine in Model.CarTypes)
+{
+    <div>
+        <p>Engine: @carEngine.Enginge, Id:@carEngine.Id</p>
+    </div>
+
+}

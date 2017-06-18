@@ -1,0 +1,15 @@
+﻿<form action="@Url.Action("AddCarType","CarType")">
+    <label for="Engine">Engine</label>
+    <input id="Engine" name="Engine" type="text" />
+
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>
+@model CarViewModel
+
+@foreach (var carEngine in Model.CarTypes)
+{
+    <div>
+        <p>@carEngine.Enginge</p>
+    </div>
+
+}

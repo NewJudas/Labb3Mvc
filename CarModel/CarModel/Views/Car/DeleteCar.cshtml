@@ -4,7 +4,7 @@
 
     <input type="submit" class="btn btn-primary" value="Submit" />
 </form>
-@model CarModel.ViewModels.CarViewModel
+@model CarViewModel
 <form action="@Url.Action("Index","Car")">
     @foreach (var car in Model.Cars)
     {

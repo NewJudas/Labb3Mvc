@@ -63,15 +63,28 @@ namespace CarModel.Controllers
         }
         public IActionResult EditCar(int id, string brand, string regNr,string carModel, int carTypeId)
         {
-            var updatingCar = _carRepository.GetCarById(id);
+            if (id != 0)
+            {
+                var updatingCar = _carRepository.GetCarById(id);
 
-            updatingCar.CarBrand = brand;
-            updatingCar.RegNr = regNr;
-            updatingCar.CarModel = carModel;
-            updatingCar.CarTypeId = carTypeId;
-
-            _carRepository.Edit(updatingCar);
-            return RedirectToAction("Index", "Car");
+                updatingCar.CarBrand = brand;
+                updatingCar.RegNr = regNr;
+                updatingCar.CarModel = carModel;
+                if (carTypeId == 0)
+                {
+                    return RedirectToAction("Error", "Shared");
+                }
+                else
+                {
+                    updatingCar.CarTypeId = carTypeId;
+                }
+                _carRepository.Edit(updatingCar);
+                return RedirectToAction("Index", "Car");
+            }
+            else
+            {
+                return RedirectToAction("Error", "Shared");
+            }
         }
 
         public IActionResult DetailsCar()
